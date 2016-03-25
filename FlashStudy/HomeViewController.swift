@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController
 {
-    @IBOutlet weak var deckTableView: DeckTableView!
+    @IBOutlet weak var deckTableView: UITableView!
     
     var decks: [Deck] = []
     
@@ -44,10 +44,14 @@ class HomeViewController: UIViewController
             {
                 let deck = Deck(name: text)
                 self.decks.append(deck)
+                self.deckTableView.reloadData()
             }
         }
         
+        let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
         alertController.addAction(setNameAction)
+        alertController.addAction(cancelButton)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
@@ -58,6 +62,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return decks.count
+    }
+    
+     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            decks.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

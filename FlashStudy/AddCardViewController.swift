@@ -20,7 +20,7 @@ class AddCardViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
 
-        deck = Deck(name: "my deck")
+        deck = Deck(name: "History")
 
         // Do any additional setup after loading the view.
     }
