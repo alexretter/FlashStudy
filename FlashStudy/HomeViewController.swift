@@ -61,6 +61,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCellWithIdentifier("deckCell", forIndexPath: indexPath)
+        
+        let deck = decks[indexPath.row]
+        cell.textLabel?.text = deck.name
+        
+        return cell
     }
 }
