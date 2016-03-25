@@ -11,6 +11,7 @@
 		996A5A771CA5B20A00972629 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A761CA5B20A00972629 /* Deck.swift */; };
 		996A5A7C1CA5B97600972629 /* FlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7B1CA5B97600972629 /* FlashcardController.swift */; };
 		996A5A7E1CA5CF8300972629 /* DeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7D1CA5CF8300972629 /* DeckController.swift */; };
+		996A5A801CA5EE0600972629 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */; };
 		996AD8E91CA5975300D300C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996AD8E81CA5975300D300C8 /* AppDelegate.swift */; };
 		996AD8EE1CA5975300D300C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996AD8EC1CA5975300D300C8 /* Main.storyboard */; };
 		996AD8F01CA5975300D300C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996AD8EF1CA5975300D300C8 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		996A5A761CA5B20A00972629 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		996A5A7B1CA5B97600972629 /* FlashcardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardController.swift; sourceTree = "<group>"; };
 		996A5A7D1CA5CF8300972629 /* DeckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckController.swift; sourceTree = "<group>"; };
+		996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
 		996AD8E51CA5975300D300C8 /* FlashStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		996AD8E81CA5975300D300C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		996AD8ED1CA5975300D300C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				996AD9231CA59FE000D300C8 /* HomeViewController.swift */,
 				996AD9211CA59FC000D300C8 /* AddCardViewController.swift */,
 				996AD92D1CA5A3F700D300C8 /* AnswerViewController.swift */,
+				996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */,
 				996A5A7A1CA5B96300972629 /* Controller */,
 			);
 			name = View;
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				996A5A7E1CA5CF8300972629 /* DeckController.swift in Sources */,
+				996A5A801CA5EE0600972629 /* QuestionsTableViewController.swift in Sources */,
 				996A5A7C1CA5B97600972629 /* FlashcardController.swift in Sources */,
 				996AD8E91CA5975300D300C8 /* AppDelegate.swift in Sources */,
 				996AD9221CA59FC000D300C8 /* AddCardViewController.swift in Sources */,

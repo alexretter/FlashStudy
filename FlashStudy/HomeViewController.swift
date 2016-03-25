@@ -13,6 +13,7 @@ class HomeViewController: UIViewController
     @IBOutlet weak var deckTableView: UITableView!
     
     var decks: [Deck] = []
+    var selectedDeck: Deck?
     
     override func viewWillAppear(animated: Bool) {
         
@@ -55,6 +56,13 @@ class HomeViewController: UIViewController
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toQuestionList" {
+            
+            let destinationViewController = segue.destinationViewController as? QuestionsTableViewController
+            destinationViewController?.deck = selectedDeck
+        }
+    }
     
 }
 
@@ -62,6 +70,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return decks.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedDeck = decks[indexPath.row]
     }
     
      func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

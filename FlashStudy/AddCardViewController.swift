@@ -53,8 +53,4 @@ class AddCardViewController: UIViewController {
         
     }
 
-    @IBAction func createDeckButtonTapped(sender: AnyObject) {
-        
-        
-    }
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 class Flashcard {
+
     var question: String
     var answer: String
     
