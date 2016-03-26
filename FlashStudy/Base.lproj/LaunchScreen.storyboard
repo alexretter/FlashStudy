@@ -14,27 +14,30 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89510111027717.560f00c6e6b86" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-ak-Pg7">
-                                <rect key="frame" x="199" y="73" width="202" height="240"/>
+                                <rect key="frame" x="106" y="74" width="162" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="rQK-d9-pBX"/>
+                                    <constraint firstAttribute="width" constant="162" id="8DR-6f-MCb"/>
+                                    <constraint firstAttribute="height" constant="195" id="rsI-3A-FVa"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.74509803919999995" green="0.81176470590000005" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CYm-Bb-MUK"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="6U3-ak-Pg7" secondAttribute="bottom" constant="287" id="Pri-ul-FWZ"/>
-                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="53" id="Z4v-kh-RKQ"/>
+                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="106" id="5Ec-27-V9g"/>
+                            <constraint firstAttribute="trailing" secondItem="6U3-ak-Pg7" secondAttribute="trailing" constant="107" id="7XH-O4-3CT"/>
+                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="54" id="CYm-S9-Xls"/>
+                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zuK-tY-vdM"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
     <resources>

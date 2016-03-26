@@ -140,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="1545.5" y="317.5"/>
         </scene>
-        <!--Questions Table View Controller-->
+        <!--Questions-->
         <scene sceneID="pde-Qt-rIB">
             <objects>
                 <tableViewController id="3bz-xH-bEr" customClass="QuestionsTableViewController" customModule="FlashStudy" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,6 +163,13 @@
                             <outlet property="delegate" destination="3bz-xH-bEr" id="rtb-2J-blD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Questions" id="Gfm-8T-dE1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="i4M-rO-wOd">
+                            <connections>
+                                <segue destination="qMg-hA-Jym" kind="show" id="RqD-r4-A9Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
@@ -187,8 +194,7 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uNz-n4-bWD">
                                         <rect key="frame" x="14" y="54" width="306" height="129"/>
-                                        <color key="backgroundColor" red="0.92648237179487181" green="0.92648237179487181" blue="0.92648237179487181" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -203,7 +209,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92648237180000004" green="0.92648237180000004" blue="0.92648237180000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="NL7-4v-acg" firstAttribute="centerX" secondItem="uNz-n4-bWD" secondAttribute="centerX" id="5sy-Qj-ut9"/>
                                     <constraint firstItem="uNz-n4-bWD" firstAttribute="top" secondItem="NL7-4v-acg" secondAttribute="bottom" constant="8" id="KE9-AI-nxn"/>
@@ -219,14 +225,14 @@
                                 <rect key="frame" x="20" y="583" width="335" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfo-By-it0">
-                                        <rect key="frame" x="280" y="17" width="47" height="30"/>
-                                        <state key="normal" title="+ Card"/>
+                                        <rect key="frame" x="107" y="17" width="121" height="30"/>
+                                        <state key="normal" title="Add Card to Deck"/>
                                         <connections>
                                             <action selector="addCardButtonTapped:" destination="qMg-hA-Jym" eventType="touchUpInside" id="N4W-4B-ueQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92648237180000004" green="0.92648237180000004" blue="0.92648237180000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="eT8-cR-eko"/>
                                 </constraints>
@@ -236,8 +242,7 @@
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-wC-QUv">
                                         <rect key="frame" x="14" y="54" width="306" height="129"/>
-                                        <color key="backgroundColor" red="0.92648237180000004" green="0.92648237180000004" blue="0.92648237180000004" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -248,7 +253,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92648237180000004" green="0.92648237180000004" blue="0.92648237180000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="2wE-hn-XtL"/>
                                     <constraint firstAttribute="height" constant="207" id="tJX-Yt-IoS"/>
