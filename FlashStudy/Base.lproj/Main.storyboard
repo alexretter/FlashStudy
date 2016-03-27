@@ -37,7 +37,7 @@
                                             <constraint firstAttribute="width" constant="90" id="zTB-lB-F6i"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89510111027717.560f00c6e6b86" translatesAutoresizingMaskIntoConstraints="NO" id="tYY-Cz-XWe">
@@ -65,7 +65,7 @@
                                 <rect key="frame" x="20" y="165" width="335" height="446"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="POp-9g-vpm">
-                                        <rect key="frame" x="8" y="53" width="319" height="376"/>
+                                        <rect key="frame" x="8" y="62" width="319" height="376"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deckCell" textLabel="o1t-dx-mBt" style="IBUITableViewCellStyleDefault" id="jA4-AW-9QF">
@@ -79,7 +79,7 @@
                                                             <rect key="frame" x="15" y="0.0" width="289" height="43"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -102,10 +102,13 @@
                                             <outlet property="delegate" destination="1Je-wD-Ctw" id="Uy4-IF-xAG"/>
                                         </connections>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Decks:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zf1-5q-tJA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Decks:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zf1-5q-tJA">
                                         <rect key="frame" x="8" y="8" width="97" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="97" id="2YE-K5-jEk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -113,9 +116,20 @@
                                 <constraints>
                                     <constraint firstItem="POp-9g-vpm" firstAttribute="top" secondItem="JFs-I9-KOU" secondAttribute="top" constant="8" id="0ef-Q3-KYm"/>
                                     <constraint firstAttribute="bottom" secondItem="POp-9g-vpm" secondAttribute="bottom" constant="8" id="MgA-64-s6v"/>
+                                    <constraint firstItem="zf1-5q-tJA" firstAttribute="top" secondItem="JFs-I9-KOU" secondAttribute="top" constant="8" id="P6k-Os-PE7"/>
                                     <constraint firstItem="POp-9g-vpm" firstAttribute="leading" secondItem="JFs-I9-KOU" secondAttribute="leading" constant="8" id="b53-lH-Ply"/>
+                                    <constraint firstItem="zf1-5q-tJA" firstAttribute="leading" secondItem="JFs-I9-KOU" secondAttribute="leading" constant="8" id="d4J-gU-0PW"/>
+                                    <constraint firstItem="POp-9g-vpm" firstAttribute="top" secondItem="zf1-5q-tJA" secondAttribute="bottom" constant="33" id="gGK-z1-ngx"/>
+                                    <constraint firstAttribute="trailing" secondItem="POp-9g-vpm" secondAttribute="trailing" constant="8" id="kXI-5M-fPF"/>
+                                    <constraint firstItem="POp-9g-vpm" firstAttribute="leading" secondItem="JFs-I9-KOU" secondAttribute="leading" constant="8" id="slE-Ac-Adx"/>
+                                    <constraint firstAttribute="bottom" secondItem="POp-9g-vpm" secondAttribute="bottom" constant="8" id="vK2-mF-dpd"/>
                                     <constraint firstAttribute="trailing" secondItem="POp-9g-vpm" secondAttribute="trailing" constant="8" id="wNv-P6-BAC"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0ef-Q3-KYm"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.79215686269999996" green="0.85098039219999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -156,6 +170,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.74509803921568629" green="0.81176470588235294" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="pw0-FP-Zko" kind="show" id="84s-GW-aS8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -205,7 +223,7 @@
                                             <constraint firstAttribute="width" constant="146" id="uu6-HV-OZT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -249,7 +267,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pose Question..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-O7-kqO">
                                         <rect key="frame" x="94" y="8" width="146" height="38"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -311,7 +329,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-93-d2b">
                                 <rect key="frame" x="67" y="64" width="240" height="124"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-J4-0pe">
@@ -324,7 +342,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qp-fN-6vt">
                                 <rect key="frame" x="67" y="226" width="240" height="124"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KD-ma-HN1">
@@ -346,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3y-q7-EoP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3045.5" y="316.5"/>
+            <point key="canvasLocation" x="2041.5" y="1132.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MeS-hV-uW9">

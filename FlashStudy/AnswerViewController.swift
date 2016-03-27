@@ -9,6 +9,7 @@
 import UIKit
 
 class AnswerViewController: UIViewController {
+    
     @IBOutlet weak var questionLabel: UILabel!
 
     @IBOutlet weak var answerLabel: UILabel!
@@ -34,11 +35,14 @@ class AnswerViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
     @IBAction func repeatCardButtonTapped(sender: AnyObject) {
         
     }
 
     @IBAction func revealAnswerButtonTapped(sender: AnyObject) {
     
+        
     }
 }
