@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "376391E214069902B29AB8DC66A7C978100BA039",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "376391E214069902B29AB8DC66A7C978100BA039" : 0,
+    "BA8008025973F4290C94C525F6BD2B2A6743A6C3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "67FDA3C7-9A26-4034-9226-8625EB99BD3E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "376391E214069902B29AB8DC66A7C978100BA039" : "FlashStudy\/",
+    "BA8008025973F4290C94C525F6BD2B2A6743A6C3" : "LocalBulb\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FlashStudy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FlashStudy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alexretter\/FlashStudy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "376391E214069902B29AB8DC66A7C978100BA039"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alexretter\/LocalBulb.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BA8008025973F4290C94C525F6BD2B2A6743A6C3"
+    }
+  ]
+}

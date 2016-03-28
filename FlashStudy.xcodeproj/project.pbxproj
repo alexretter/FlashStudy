@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		995FE0851CA8DBEB000B38C9 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995FE0811CA8DBEB000B38C9 /* MaterialButton.swift */; };
+		995FE0861CA8DBEB000B38C9 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995FE0821CA8DBEB000B38C9 /* MaterialView.swift */; };
+		995FE0871CA8DBEB000B38C9 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995FE0831CA8DBEB000B38C9 /* MaterialTextField.swift */; };
 		996A5A751CA5B20400972629 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A741CA5B20400972629 /* Flashcard.swift */; };
 		996A5A771CA5B20A00972629 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A761CA5B20A00972629 /* Deck.swift */; };
 		996A5A7C1CA5B97600972629 /* FlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7B1CA5B97600972629 /* FlashcardController.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		995FE0811CA8DBEB000B38C9 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
+		995FE0821CA8DBEB000B38C9 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		995FE0831CA8DBEB000B38C9 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
 		996A5A741CA5B20400972629 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		996A5A761CA5B20A00972629 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		996A5A7B1CA5B97600972629 /* FlashcardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardController.swift; sourceTree = "<group>"; };
@@ -88,11 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		995FE0841CA8DBEB000B38C9 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				995FE0811CA8DBEB000B38C9 /* MaterialButton.swift */,
+				995FE0821CA8DBEB000B38C9 /* MaterialView.swift */,
+				995FE0831CA8DBEB000B38C9 /* MaterialTextField.swift */,
+			);
+			name = "Custom View";
+			path = ../../LocalBulb/LocalBulb;
+			sourceTree = "<group>";
+		};
 		996A5A7A1CA5B96300972629 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				996A5A7B1CA5B97600972629 /* FlashcardController.swift */,
 				996A5A7D1CA5CF8300972629 /* DeckController.swift */,
+				995FE0841CA8DBEB000B38C9 /* Custom View */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -305,6 +323,9 @@
 				996A5A801CA5EE0600972629 /* QuestionsTableViewController.swift in Sources */,
 				996A5A7C1CA5B97600972629 /* FlashcardController.swift in Sources */,
 				996AD8E91CA5975300D300C8 /* AppDelegate.swift in Sources */,
+				995FE0861CA8DBEB000B38C9 /* MaterialView.swift in Sources */,
+				995FE0851CA8DBEB000B38C9 /* MaterialButton.swift in Sources */,
+				995FE0871CA8DBEB000B38C9 /* MaterialTextField.swift in Sources */,
 				996AD9221CA59FC000D300C8 /* AddCardViewController.swift in Sources */,
 				996A5A751CA5B20400972629 /* Flashcard.swift in Sources */,
 				996AD9241CA59FE000D300C8 /* HomeViewController.swift in Sources */,
