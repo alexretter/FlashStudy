@@ -56,8 +56,7 @@ class AnswerViewController: UIViewController {
         goToNextCard()
     }
     
-    func goToNextCard()
-    {
+    func goToNextCard() {
         randomIndex = Int(arc4random_uniform(UInt32(deck.deckOfFlashcards.count)))
         let card = deck.deckOfFlashcards[randomIndex]
         questionLabel.text = card.question
