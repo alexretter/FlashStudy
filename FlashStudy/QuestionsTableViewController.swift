@@ -69,20 +69,21 @@ class QuestionsTableViewController: UITableViewController {
         if segue.identifier == "toFlashCard" {
             
             let destinationViewController = segue.destinationViewController as? AnswerViewController
-            destinationViewController?.questionLabel.text
+            destinationViewController!.deck = self.deck
+
         }
     }
    
     @IBAction func takeQuizButtonTapped(sender: AnyObject) {
         
-        override func prepareforSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            
-            if segue.identifier == "toFlashCard" {
-                
-                let destinationViewController = segue.destinationViewController as? AnswerViewController
-                destinationViewController?.questionLabel.text
-            }
-        }
+        self.performSegueWithIdentifier("toFlashCard", sender: nil)
+    
     }
 
+
+
 }
+
+
+
+
