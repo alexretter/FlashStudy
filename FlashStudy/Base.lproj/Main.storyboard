@@ -374,6 +374,14 @@
                                     <action selector="repeatCardButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="0Qj-vu-GFI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-nj-Bi6">
+                                <rect key="frame" x="325" y="617" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="-&gt;"/>
+                                <connections>
+                                    <action selector="nextQuestionButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="9pt-Gx-iDG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.79215686269999996" green="0.85098039219999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

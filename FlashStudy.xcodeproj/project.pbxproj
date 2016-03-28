@@ -181,8 +181,8 @@
 			children = (
 				996AD9231CA59FE000D300C8 /* HomeViewController.swift */,
 				996AD9211CA59FC000D300C8 /* AddCardViewController.swift */,
-				996AD92D1CA5A3F700D300C8 /* AnswerViewController.swift */,
 				996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */,
+				996AD92D1CA5A3F700D300C8 /* AnswerViewController.swift */,
 				996A5A7A1CA5B96300972629 /* Controller */,
 			);
 			name = View;

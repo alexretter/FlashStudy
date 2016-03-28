@@ -14,7 +14,7 @@ class Deck {
     
     var deckOfFlashcards = [Flashcard]()
     
-    let unknownCards = [Flashcard]()
+    var unknownCards = [Flashcard]()
     
     init(name:String) {
         self.name = name
