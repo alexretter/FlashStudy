@@ -20,8 +20,6 @@ class AddCardViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
 
-        deck = Deck(name: "History")
-
         // Do any additional setup after loading the view.
     }
 
@@ -44,7 +42,14 @@ class AddCardViewController: UIViewController {
        
         let newCard = FlashcardController.createCard(questionTextView.text, answerText: answerTextView.text)
         
-        self.deck.deckOfFlashcards.append(newCard)
+        if let deck = deck
+        {
+            deck.deckOfFlashcards.append(newCard)
+        }
+        else
+        {
+            print("Deck was not passed correctly")
+        }
         
         questionTextView.text = ""
         answerTextView.text = ""

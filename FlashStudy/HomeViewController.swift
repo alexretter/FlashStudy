@@ -74,6 +74,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         selectedDeck = decks[indexPath.row]
+        self.performSegueWithIdentifier("toQuestionList", sender: nil)
     }
     
      func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
