@@ -29,15 +29,6 @@ class AddCardViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func addCardButtonTapped(sender: AnyObject) {
        
         let newCard = FlashcardController.createCard(questionTextView.text, answerText: answerTextView.text)
@@ -53,6 +44,8 @@ class AddCardViewController: UIViewController {
         
         questionTextView.text = ""
         answerTextView.text = ""
+        
+        questionTextView.becomeFirstResponder()
         
         
         

@@ -12,8 +12,22 @@ class QuestionsTableViewController: UITableViewController {
 
     var deck: Deck?
     
+    @IBOutlet weak var quizMeButton: UIButton!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        
+        if deck?.deckOfFlashcards.count >= 1 {
+            
+            quizMeButton.userInteractionEnabled = true
+        
+        } else {
+            
+            let alertController = UIAlertController(title: "Oops", message: "You must enter questions to be quizzed on!", preferredStyle: .Alert)
+            let okButton = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+            alertController.addAction(okButton)
+        }
+        
         tableView.reloadData()
     }
     
@@ -21,8 +35,6 @@ class QuestionsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = false
-
-        
     
     }
 
@@ -75,14 +87,12 @@ class QuestionsTableViewController: UITableViewController {
     }
    
     @IBAction func takeQuizButtonTapped(sender: AnyObject) {
-        
+       
         self.performSegueWithIdentifier("toFlashCard", sender: nil)
-    
     }
 
-
-
 }
+
 
 
 
