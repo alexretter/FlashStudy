@@ -184,7 +184,7 @@
                         <view key="tableFooterView" contentMode="scaleToFill" id="lYE-Xi-Ybe">
                             <rect key="frame" x="0.0" y="180" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" id="Kea-t5-umj">
@@ -193,6 +193,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kea-t5-umj" id="F6v-U7-iKu">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.74509803921568629" green="0.81176470588235294" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.74509803921568629" green="0.81176470588235294" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
