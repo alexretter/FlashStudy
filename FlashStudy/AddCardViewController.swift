@@ -31,24 +31,15 @@ class AddCardViewController: UIViewController {
 
     @IBAction func addCardButtonTapped(sender: AnyObject) {
        
-        let newCard = FlashcardController.createCard(questionTextView.text, answerText: answerTextView.text)
-        
-        if let deck = deck
-        {
-            deck.deckOfFlashcards.append(newCard)
-        }
-        else
-        {
-            print("Deck was not passed correctly")
-        }
+        let card = FlashcardController.insertFlashcardIntoContext(Stack.sharedStack.managedObjectContext)
+        card.question = questionTextView.text
+        card.answer = answerTextView.text
         
         questionTextView.text = ""
         answerTextView.text = ""
         
         questionTextView.becomeFirstResponder()
-        
-        
-        
+        FlashcardController.saveToPersistentStore()
     }
 
 }

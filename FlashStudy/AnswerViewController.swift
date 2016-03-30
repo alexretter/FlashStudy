@@ -21,9 +21,9 @@ class AnswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        randomIndex = Int(arc4random_uniform(UInt32(deck.deckOfFlashcards.count)))
+        randomIndex = Int(arc4random_uniform(UInt32(deck.flashcards.count)))
         
-        let card = deck.deckOfFlashcards[randomIndex]
+        let card = deck.flashcards[randomIndex]
         
         questionLabel.text = card.question
         answerLabel.text = card.answer
@@ -39,16 +39,16 @@ class AnswerViewController: UIViewController {
     }
     
     
-    @IBAction func repeatCardButtonTapped(sender: AnyObject) {
+    /*@IBAction func repeatCardButtonTapped(sender: AnyObject) {
         deck.unknownCards.append(deck.deckOfFlashcards[randomIndex])
         goToNextCard()
-    }
+    }*/
 
     @IBAction func revealAnswerButtonTapped(sender: AnyObject) {
     
         self.answerLabel.hidden = false
         
-        answerLabel.text = deck.deckOfFlashcards[randomIndex].answer
+        answerLabel.text = deck.flashcards[randomIndex].answer
         
     }
     @IBAction func nextQuestionButtonTapped(sender: AnyObject) {
@@ -57,10 +57,11 @@ class AnswerViewController: UIViewController {
     }
     
     func goToNextCard() {
-        randomIndex = Int(arc4random_uniform(UInt32(deck.deckOfFlashcards.count)))
-        let card = deck.deckOfFlashcards[randomIndex]
+        randomIndex = Int(arc4random_uniform(UInt32(deck.flashcards.count)))
+        let card = deck.flashcards[randomIndex]
         questionLabel.text = card.question
         answerLabel.text = card.answer
         answerLabel.hidden = true
     }
+    
 }

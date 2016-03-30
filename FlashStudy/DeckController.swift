@@ -7,14 +7,57 @@
 //
 
 import Foundation
+import CoreData
 
 class DeckController {
-
-    static func createDeck(name:String) -> Deck {
+   
+    static let sharedController = DeckController()
+    
+    var deck: Deck?
+    
+    func fetchAllDecksInContext() -> [Deck] {
         
-        let newDeck = Deck(name: name)
+        let request = NSFetchRequest(entityName: "Deck")
         
-        return newDeck
-   }
-
+        let moc = Stack.sharedStack.managedObjectContext
+        
+        do {
+            
+            return try moc.executeFetchRequest(request) as! [Deck]
+            
+        } catch {
+            
+            return []
+        }
+    }
+    
+    func saveToPersistentStore() {
+        
+        let moc = Stack.sharedStack.managedObjectContext
+        do {
+            try moc.save()
+        } catch {
+            print("Error saving \(error)")
+        }
+    }
+    
+    static func insertDeckIntoContext(context: NSManagedObjectContext) -> Deck {
+        
+      return NSEntityDescription.insertNewObjectForEntityForName("Deck", inManagedObjectContext: context) as! Deck
+    
+    }
+    
+    func removeDeckFromContext() {
+        
+        if let deck = deck {
+            if let moc = deck.managedObjectContext {
+                moc.deleteObject(deck)
+                saveToPersistentStore()
+            }
+            
+        }
+    }
+    
 }
+
+

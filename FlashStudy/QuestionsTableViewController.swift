@@ -17,7 +17,7 @@ class QuestionsTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        if deck?.deckOfFlashcards.count >= 1 {
+        if deck?.flashcards.count >= 1 {
             
             quizMeButton.userInteractionEnabled = true
         
@@ -53,7 +53,7 @@ class QuestionsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if let deck = deck {
-            return deck.deckOfFlashcards.count
+            return deck.flashcards.count
         } else {
             return 0
         }
@@ -65,8 +65,7 @@ class QuestionsTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        let flashcards = deck?.deckOfFlashcards
-        let flashcard = flashcards![indexPath.row]
+        let flashcard = deck!.flashcards[indexPath.row]
         cell.textLabel?.text = flashcard.question
 
         return cell

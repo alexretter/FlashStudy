@@ -7,13 +7,54 @@
 //
 
 import Foundation
+import CoreData
 
 class FlashcardController {
     
-    static func createCard(questionText: String, answerText: String) -> Flashcard {
+    static let sharedController = FlashcardController()
+    
+    var flashcard: Flashcard?
+    
+    func fetchAllDecksInContext() -> [Flashcard] {
         
-        let flashCard = Flashcard(question: questionText, answer: answerText)
+        let request = NSFetchRequest(entityName: "Flashcard")
         
-        return flashCard
+        let moc = Stack.sharedStack.managedObjectContext
+        
+        do {
+            
+            return try moc.executeFetchRequest(request) as! [Flashcard]
+            
+        } catch {
+            
+            return []
+        }
     }
+    
+    static func saveToPersistentStore() {
+        
+        let moc = Stack.sharedStack.managedObjectContext
+        do {
+            try moc.save()
+        } catch {
+            print("Error saving \(error)")
+        }
+    }
+    
+    static func insertFlashcardIntoContext(context: NSManagedObjectContext) -> Flashcard {
+        
+       return NSEntityDescription.insertNewObjectForEntityForName("Flashcard", inManagedObjectContext: context) as! Flashcard
+    }
+    
+    func removeFlashcardFromContext() {
+        if let flashcard = self.flashcard
+        {
+            if let moc = flashcard.managedObjectContext {
+                moc.deleteObject(flashcard)
+                //saveToPersistentStore()
+            }
+        }
+    }
+    
+    
 }

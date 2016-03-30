@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		992CACD21CAB1ACA00237482 /* MOC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 992CACD01CAB1ACA00237482 /* MOC.xcdatamodeld */; };
+		992CACD41CAB1DE100237482 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992CACD31CAB1DE100237482 /* Stack.swift */; };
+		992CACE51CAB2A0C00237482 /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992CACE11CAB2A0C00237482 /* Deck+CoreDataProperties.swift */; };
+		992CACE61CAB2A0C00237482 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992CACE21CAB2A0C00237482 /* Deck.swift */; };
+		992CACE71CAB2A0C00237482 /* Flashcard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992CACE31CAB2A0C00237482 /* Flashcard+CoreDataProperties.swift */; };
+		992CACE81CAB2A0C00237482 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992CACE41CAB2A0C00237482 /* Flashcard.swift */; };
 		995FE0851CA8DBEB000B38C9 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995FE0811CA8DBEB000B38C9 /* MaterialButton.swift */; };
 		995FE0861CA8DBEB000B38C9 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995FE0821CA8DBEB000B38C9 /* MaterialView.swift */; };
 		995FE0871CA8DBEB000B38C9 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995FE0831CA8DBEB000B38C9 /* MaterialTextField.swift */; };
-		996A5A751CA5B20400972629 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A741CA5B20400972629 /* Flashcard.swift */; };
-		996A5A771CA5B20A00972629 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A761CA5B20A00972629 /* Deck.swift */; };
 		996A5A7C1CA5B97600972629 /* FlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7B1CA5B97600972629 /* FlashcardController.swift */; };
 		996A5A7E1CA5CF8300972629 /* DeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7D1CA5CF8300972629 /* DeckController.swift */; };
 		996A5A801CA5EE0600972629 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */; };
@@ -44,11 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		992CACD11CAB1ACA00237482 /* MOC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MOC.xcdatamodel; sourceTree = "<group>"; };
+		992CACD31CAB1DE100237482 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		992CACE11CAB2A0C00237482 /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		992CACE21CAB2A0C00237482 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deck.swift; path = ../../LocalBulb/LocalBulb/Deck.swift; sourceTree = "<group>"; };
+		992CACE31CAB2A0C00237482 /* Flashcard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Flashcard+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		992CACE41CAB2A0C00237482 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flashcard.swift; path = ../../LocalBulb/LocalBulb/Flashcard.swift; sourceTree = "<group>"; };
 		995FE0811CA8DBEB000B38C9 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		995FE0821CA8DBEB000B38C9 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		995FE0831CA8DBEB000B38C9 /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
-		996A5A741CA5B20400972629 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
-		996A5A761CA5B20A00972629 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		996A5A7B1CA5B97600972629 /* FlashcardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardController.swift; sourceTree = "<group>"; };
 		996A5A7D1CA5CF8300972629 /* DeckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckController.swift; sourceTree = "<group>"; };
 		996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
@@ -94,12 +102,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		992CACCF1CAB1A8A00237482 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				992CACE11CAB2A0C00237482 /* Deck+CoreDataProperties.swift */,
+				992CACE31CAB2A0C00237482 /* Flashcard+CoreDataProperties.swift */,
+				992CACD31CAB1DE100237482 /* Stack.swift */,
+				992CACD01CAB1ACA00237482 /* MOC.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		995FE0841CA8DBEB000B38C9 /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
 				995FE0811CA8DBEB000B38C9 /* MaterialButton.swift */,
 				995FE0821CA8DBEB000B38C9 /* MaterialView.swift */,
 				995FE0831CA8DBEB000B38C9 /* MaterialTextField.swift */,
+				992CACCF1CAB1A8A00237482 /* Core Data */,
 			);
 			name = "Custom View";
 			path = ../../LocalBulb/LocalBulb;
@@ -170,8 +190,8 @@
 		996AD91F1CA59EE200D300C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				996A5A741CA5B20400972629 /* Flashcard.swift */,
-				996A5A761CA5B20A00972629 /* Deck.swift */,
+				992CACE41CAB2A0C00237482 /* Flashcard.swift */,
+				992CACE21CAB2A0C00237482 /* Deck.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -319,17 +339,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992CACE61CAB2A0C00237482 /* Deck.swift in Sources */,
+				992CACD21CAB1ACA00237482 /* MOC.xcdatamodeld in Sources */,
+				992CACE81CAB2A0C00237482 /* Flashcard.swift in Sources */,
 				996A5A7E1CA5CF8300972629 /* DeckController.swift in Sources */,
+				992CACD41CAB1DE100237482 /* Stack.swift in Sources */,
+				992CACE51CAB2A0C00237482 /* Deck+CoreDataProperties.swift in Sources */,
 				996A5A801CA5EE0600972629 /* QuestionsTableViewController.swift in Sources */,
 				996A5A7C1CA5B97600972629 /* FlashcardController.swift in Sources */,
 				996AD8E91CA5975300D300C8 /* AppDelegate.swift in Sources */,
 				995FE0861CA8DBEB000B38C9 /* MaterialView.swift in Sources */,
+				992CACE71CAB2A0C00237482 /* Flashcard+CoreDataProperties.swift in Sources */,
 				995FE0851CA8DBEB000B38C9 /* MaterialButton.swift in Sources */,
 				995FE0871CA8DBEB000B38C9 /* MaterialTextField.swift in Sources */,
 				996AD9221CA59FC000D300C8 /* AddCardViewController.swift in Sources */,
-				996A5A751CA5B20400972629 /* Flashcard.swift in Sources */,
 				996AD9241CA59FE000D300C8 /* HomeViewController.swift in Sources */,
-				996A5A771CA5B20A00972629 /* Deck.swift in Sources */,
 				996AD92E1CA5A3F700D300C8 /* AnswerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +602,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		992CACD01CAB1ACA00237482 /* MOC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				992CACD11CAB1ACA00237482 /* MOC.xcdatamodel */,
+			);
+			currentVersion = 992CACD11CAB1ACA00237482 /* MOC.xcdatamodel */;
+			path = MOC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 996AD8DD1CA5975300D300C8 /* Project object */;
 }
