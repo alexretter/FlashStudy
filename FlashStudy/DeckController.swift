@@ -35,16 +35,16 @@ class DeckController {
         
         let moc = Stack.sharedStack.managedObjectContext
         do {
-            try moc.save()
+            try Stack.sharedStack.managedObjectContext.save()
         } catch {
             print("Error saving \(error)")
         }
     }
     
-    static func insertDeckIntoContext(context: NSManagedObjectContext) -> Deck {
+    static func insertDeckIntoContext(context: NSManagedObjectContext) {
         
-      return NSEntityDescription.insertNewObjectForEntityForName("Deck", inManagedObjectContext: context) as! Deck
-    
+        DeckController.sharedController.saveToPersistentStore()
+        
     }
     
     func removeDeckFromContext() {

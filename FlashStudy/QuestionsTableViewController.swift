@@ -34,6 +34,8 @@ class QuestionsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // self.automaticallyAdjustsScrollViewInsets = false
+        
         self.navigationController?.navigationBarHidden = false
     
     }
@@ -65,6 +67,7 @@ class QuestionsTableViewController: UITableViewController {
 
         // Configure the cell...
         
+        //let flashcards = deck?.flashcards
         let flashcard = deck!.flashcards[indexPath.row]
         cell.textLabel?.text = flashcard.question
 

@@ -236,7 +236,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-UA-2NY" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="326" width="343" height="203"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNz-n4-bWD">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNz-n4-bWD" customClass="MaterialTextView" customModule="FlashStudy" customModuleProvider="target">
                                         <rect key="frame" x="14" y="54" width="315" height="129"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -266,7 +266,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR0-iR-QKZ" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="72" width="343" height="207"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-wC-QUv">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-wC-QUv" customClass="MaterialTextView" customModule="FlashStudy" customModuleProvider="target">
                                         <rect key="frame" x="14" y="54" width="316" height="129"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>

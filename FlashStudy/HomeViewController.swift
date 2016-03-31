@@ -43,7 +43,7 @@ class HomeViewController: UIViewController
         let setNameAction = UIAlertAction(title: "Set Name", style: .Default) { (_) -> Void in
             if let text = alertController.textFields?[0].text
             {
-                let deck = Deck()
+                let deck = Deck(name: text, flashcards: [])
                 self.decks.append(deck)
                 self.deckTableView.reloadData()
             }
