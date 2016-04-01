@@ -11,21 +11,30 @@ import UIKit
 class QuestionsTableViewController: UITableViewController {
 
     var deck: Deck?
+    var flashcards: [Flashcard]?
     
     @IBOutlet weak var quizMeButton: UIButton!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        if deck?.flashcards.count >= 1 {
-            
-            quizMeButton.userInteractionEnabled = true
-        
-        } else {
-            
-            let alertController = UIAlertController(title: "Oops", message: "You must enter questions to be quizzed on!", preferredStyle: .Alert)
-            let okButton = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
-            alertController.addAction(okButton)
+        if let deckContext = self.deck?.managedObjectContext
+        {
+            self.flashcards = FlashcardController.sharedController.fetchAllFlashcardsInContext(deckContext)
+            if let flashcards = self.flashcards
+            {
+                if flashcards.count >= 1
+                {
+                    quizMeButton.userInteractionEnabled = true
+                }
+                else
+                {
+                    
+                    let alertController = UIAlertController(title: "Oops", message: "You must enter questions to be quizzed on!", preferredStyle: .Alert)
+                    let okButton = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+                    alertController.addAction(okButton)
+                }
+            }
         }
         
         tableView.reloadData()
@@ -54,8 +63,8 @@ class QuestionsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if let deck = deck {
-            return deck.flashcards.count
+        if let flashcards = self.flashcards {
+            return flashcards.count
         } else {
             return 0
         }
@@ -68,12 +77,13 @@ class QuestionsTableViewController: UITableViewController {
         // Configure the cell...
         
         //let flashcards = deck?.flashcards
-        let flashcard = deck!.flashcards[indexPath.row]
+        if let flashcards = self.flashcards {
+        let flashcard = flashcards[indexPath.row]
         cell.textLabel?.text = flashcard.question
-
-        return cell
     }
-    
+        return cell
+
+    }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toAddCard"
         {

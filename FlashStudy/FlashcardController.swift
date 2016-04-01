@@ -15,15 +15,15 @@ class FlashcardController {
     
     var flashcard: Flashcard?
     
-    func fetchAllDecksInContext() -> [Flashcard] {
+    func fetchAllFlashcardsInContext(context: NSManagedObjectContext) -> [Flashcard]? {
         
         let request = NSFetchRequest(entityName: "Flashcard")
         
-        let moc = Stack.sharedStack.managedObjectContext
-        
         do {
             
-            return try moc.executeFetchRequest(request) as! [Flashcard]
+            let flashcards = try context.executeFetchRequest(request) as! [Flashcard]
+            print("FETCHING ALL FLASHCARDS SUCCEEDED")
+            return flashcards
             
         } catch {
             
@@ -36,6 +36,7 @@ class FlashcardController {
         let moc = Stack.sharedStack.managedObjectContext
         do {
             try moc.save()
+            print("SUCESS SAVING")
         } catch {
             print("Error saving \(error)")
         }

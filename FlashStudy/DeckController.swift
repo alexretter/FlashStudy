@@ -15,46 +15,42 @@ class DeckController {
     
     var deck: Deck?
     
-    func fetchAllDecksInContext() -> [Deck] {
+    func fetchAllDecksInContext(context: NSManagedObjectContext) -> [Deck]? {
         
         let request = NSFetchRequest(entityName: "Deck")
         
-        let moc = Stack.sharedStack.managedObjectContext
-        
         do {
             
-            return try moc.executeFetchRequest(request) as! [Deck]
+            let decks = try context.executeFetchRequest(request) as! [Deck]
+            print("FETCHING ALL DECKS SUCCEEDED")
+            return decks
             
         } catch {
             
+            print("FETCHING ALL DECKS DID NOT SUCCEED")
             return []
         }
     }
     
     func saveToPersistentStore() {
         
-        let moc = Stack.sharedStack.managedObjectContext
+       // let moc = Stack.sharedStack.managedObjectContext
         do {
             try Stack.sharedStack.managedObjectContext.save()
-        } catch {
-            print("Error saving \(error)")
+            print("SUCCESS SAVING")
+        } catch let error as NSError {
+            print("Error saving \(error.localizedDescription) -> \(__FUNCTION__)")
         }
     }
     
-    static func insertDeckIntoContext(context: NSManagedObjectContext) {
-        
-        DeckController.sharedController.saveToPersistentStore()
-        
+    func insertDeckIntoContext(context: NSManagedObjectContext) -> Deck {
+        return NSEntityDescription.insertNewObjectForEntityForName("Deck", inManagedObjectContext: context) as! Deck
     }
     
-    func removeDeckFromContext() {
-        
-        if let deck = deck {
-            if let moc = deck.managedObjectContext {
+    func removeDeckFromContext(deck: Deck) {
+        if let moc = deck.managedObjectContext {
                 moc.deleteObject(deck)
                 saveToPersistentStore()
-            }
-            
         }
     }
     

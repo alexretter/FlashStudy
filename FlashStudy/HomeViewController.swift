@@ -12,12 +12,13 @@ class HomeViewController: UIViewController
 {
     @IBOutlet weak var deckTableView: UITableView!
     
-    var decks: [Deck] = []
-    var selectedDeck: Deck?
+    var selectedDeck: Deck!
+    var decks: [Deck]?
     
     override func viewWillAppear(animated: Bool) {
         
         self.navigationController?.navigationBarHidden = true
+        self.decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
     }
     
     override func viewDidLoad() {
@@ -33,7 +34,7 @@ class HomeViewController: UIViewController
     
     
     @IBAction func addDeckButtonTapped(sender: UIButton) {
-        let alertController = UIAlertController(title: "Deck Name", message: "", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "Name Your Study Guide!", message: "🤓", preferredStyle: .Alert)
         
         alertController.addTextFieldWithConfigurationHandler { (textField: UITextField!) in
             
@@ -43,8 +44,9 @@ class HomeViewController: UIViewController
         let setNameAction = UIAlertAction(title: "Set Name", style: .Default) { (_) -> Void in
             if let text = alertController.textFields?[0].text
             {
-                let deck = Deck(name: text, flashcards: [])
-                self.decks.append(deck)
+                let deck = DeckController.sharedController.insertDeckIntoContext(Stack.sharedStack.managedObjectContext)
+                deck.name = text
+                DeckController.sharedController.saveToPersistentStore()
                 self.deckTableView.reloadData()
             }
         }
@@ -63,28 +65,36 @@ class HomeViewController: UIViewController
             destinationViewController?.deck = selectedDeck
         }
     }
-    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return decks.count
+        if let decks = self.decks
+        {
+            return decks.count
+        }
+        else
+        {
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        selectedDeck = decks[indexPath.row]
-        self.performSegueWithIdentifier("toQuestionList", sender: nil)
+        if let decks = self.decks
+        {
+            selectedDeck = decks[indexPath.row]
+            self.performSegueWithIdentifier("toQuestionList", sender: nil)
+        }
     }
     
-     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    
-     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.Delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
-            decks.removeAtIndex(indexPath.row)
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete)
+        {
+            if let decks = self.decks
+            {
+                DeckController.sharedController.removeDeckFromContext(decks[indexPath.row])
+            }
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
@@ -92,8 +102,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("deckCell", forIndexPath: indexPath)
         
-        let deck = decks[indexPath.row]
-        cell.textLabel?.text = deck.name
+        if let decks = self.decks
+        {
+            let deck = decks[indexPath.row]
+            cell.textLabel?.text = deck.name
+        }
         
         return cell
     }

@@ -66,7 +66,7 @@
                                 <rect key="frame" x="20" y="165" width="335" height="446"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="POp-9g-vpm">
-                                        <rect key="frame" x="8" y="62" width="319" height="376"/>
+                                        <rect key="frame" x="8" y="59" width="319" height="376"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deckCell" textLabel="o1t-dx-mBt" style="IBUITableViewCellStyleDefault" id="jA4-AW-9QF">
@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="1545.5" y="317.5"/>
         </scene>
-        <!--Questions-->
+        <!--Create Flashcards ->-->
         <scene sceneID="pde-Qt-rIB">
             <objects>
                 <tableViewController id="3bz-xH-bEr" customClass="QuestionsTableViewController" customModule="FlashStudy" customModuleProvider="target" sceneMemberID="viewController">
@@ -203,7 +203,7 @@
                             <outlet property="delegate" destination="3bz-xH-bEr" id="rtb-2J-blD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Questions" id="Gfm-8T-dE1">
+                    <navigationItem key="navigationItem" title="Create Flashcards -&gt;" id="Gfm-8T-dE1">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="i4M-rO-wOd">
                             <connections>
                                 <segue destination="qMg-hA-Jym" kind="show" identifier="toAddCard" id="RqD-r4-A9Q"/>
