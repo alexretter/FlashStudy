@@ -18,9 +18,10 @@ class QuestionsTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         
-        if let deckContext = self.deck?.managedObjectContext
+        if let deck = self.deck
         {
-            self.flashcards = FlashcardController.sharedController.fetchAllFlashcardsInContext(deckContext)
+            print(deck)
+            self.flashcards = deck.flashcards
             if let flashcards = self.flashcards
             {
                 if flashcards.count >= 1

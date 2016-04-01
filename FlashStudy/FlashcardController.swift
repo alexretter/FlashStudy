@@ -15,13 +15,17 @@ class FlashcardController {
     
     var flashcard: Flashcard?
     
-    func fetchAllFlashcardsInContext(context: NSManagedObjectContext) -> [Flashcard]? {
+    func fetchAllFlashcardsForDeck(deck: Deck) -> [Flashcard]? {
         
         let request = NSFetchRequest(entityName: "Flashcard")
         
         do {
             
-            let flashcards = try context.executeFetchRequest(request) as! [Flashcard]
+            let flashcards = try deck.managedObjectContext?.executeFetchRequest(request) as! [Flashcard]
+            for card in flashcards
+            {
+                print(card.question)
+            }
             print("FETCHING ALL FLASHCARDS SUCCEEDED")
             return flashcards
             

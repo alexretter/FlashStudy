@@ -14,7 +14,7 @@ class AddCardViewController: UIViewController {
     
     @IBOutlet weak var answerTextView: UITextView!
    
-    var deck: Deck!
+    var deck: Deck?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +31,19 @@ class AddCardViewController: UIViewController {
 
     @IBAction func addCardButtonTapped(sender: AnyObject) {
        
-        let card = FlashcardController.insertFlashcardIntoContext(Stack.sharedStack.managedObjectContext)
-        card.question = questionTextView.text
-        card.answer = answerTextView.text
-        
-        questionTextView.text = ""
-        answerTextView.text = ""
-        
-        questionTextView.becomeFirstResponder()
-        FlashcardController.saveToPersistentStore()
+        if let deck = self.deck
+        {
+            let card = FlashcardController.insertFlashcardIntoContext(deck.managedObjectContext!)
+            card.question = questionTextView.text
+            card.answer = answerTextView.text
+            card.deck = deck
+            
+            questionTextView.text = ""
+            answerTextView.text = ""
+            
+            questionTextView.becomeFirstResponder()
+            FlashcardController.saveToPersistentStore()
+        }
     }
 
 }

@@ -18,7 +18,7 @@ class HomeViewController: UIViewController
     override func viewWillAppear(animated: Bool) {
         
         self.navigationController?.navigationBarHidden = true
-        self.decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
+        getDecks()
     }
     
     override func viewDidLoad() {
@@ -32,6 +32,10 @@ class HomeViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    func getDecks()
+    {
+        self.decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
+    }
     
     @IBAction func addDeckButtonTapped(sender: UIButton) {
         let alertController = UIAlertController(title: "Name Your Study Guide!", message: "🤓", preferredStyle: .Alert)
@@ -47,6 +51,7 @@ class HomeViewController: UIViewController
                 let deck = DeckController.sharedController.insertDeckIntoContext(Stack.sharedStack.managedObjectContext)
                 deck.name = text
                 DeckController.sharedController.saveToPersistentStore()
+                self.getDecks()
                 self.deckTableView.reloadData()
             }
         }
@@ -55,6 +60,7 @@ class HomeViewController: UIViewController
         
         alertController.addAction(setNameAction)
         alertController.addAction(cancelButton)
+        alertController.preferredAction = setNameAction
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
@@ -78,6 +84,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         {
             return 0
         }
+        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
