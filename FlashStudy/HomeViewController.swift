@@ -102,7 +102,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             {
                 DeckController.sharedController.removeDeckFromContext(decks[indexPath.row])
             }
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            deckTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
     
