@@ -19,6 +19,8 @@ class AddCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = false
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }
@@ -28,6 +30,9 @@ class AddCardViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 
     @IBAction func addCardButtonTapped(sender: AnyObject) {
        
