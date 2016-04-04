@@ -21,6 +21,8 @@ class AnswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = false
+        
         randomIndex = Int(arc4random_uniform(UInt32(deck.flashcards.count)))
         
         let card = deck.flashcards[randomIndex]

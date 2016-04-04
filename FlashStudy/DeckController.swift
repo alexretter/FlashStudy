@@ -47,10 +47,16 @@ class DeckController {
         return NSEntityDescription.insertNewObjectForEntityForName("Deck", inManagedObjectContext: context) as! Deck
     }
     
-    func removeDeckFromContext(deck: Deck) {
-        if let moc = deck.managedObjectContext {
-                moc.deleteObject(deck)
-                saveToPersistentStore()
+    func removeDeckFromContext(deck: Deck, completion: (success: Bool) -> Void ) {
+        let moc = Stack.sharedStack.managedObjectContext
+        moc.deleteObject(deck)
+        do {
+            try moc.save()
+            print("success")
+            completion(success: true)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+            completion(success: false)
         }
     }
     

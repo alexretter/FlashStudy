@@ -13,12 +13,10 @@ class HomeViewController: UIViewController
     @IBOutlet weak var deckTableView: UITableView!
     
     var selectedDeck: Deck!
-    var decks: [Deck]?
     
     override func viewWillAppear(animated: Bool) {
         
         self.navigationController?.navigationBarHidden = true
-        getDecks()
     }
     
     override func viewDidLoad() {
@@ -30,11 +28,6 @@ class HomeViewController: UIViewController
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func getDecks()
-    {
-        self.decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
     }
     
     @IBAction func addDeckButtonTapped(sender: UIButton) {
@@ -51,7 +44,6 @@ class HomeViewController: UIViewController
                 let deck = DeckController.sharedController.insertDeckIntoContext(Stack.sharedStack.managedObjectContext)
                 deck.name = text
                 DeckController.sharedController.saveToPersistentStore()
-                self.getDecks()
                 self.deckTableView.reloadData()
             }
         }
@@ -76,7 +68,8 @@ class HomeViewController: UIViewController
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let decks = self.decks
+        
+        if let decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
         {
             return decks.count
         }
@@ -84,32 +77,46 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         {
             return 0
         }
-        
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let decks = self.decks
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if let decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
         {
             selectedDeck = decks[indexPath.row]
             self.performSegueWithIdentifier("toQuestionList", sender: nil)
         }
     }
     
+     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
         if (editingStyle == UITableViewCellEditingStyle.Delete)
         {
-            if let decks = self.decks
+            
+            if let decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
             {
-                DeckController.sharedController.removeDeckFromContext(decks[indexPath.row])
+                let deck = decks[indexPath.row]
+                DeckController.sharedController.removeDeckFromContext(deck, completion: { (success) -> Void in
+                    print(success)
+                    
+                    if success {
+                        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                    }
+                })
             }
-            deckTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("deckCell", forIndexPath: indexPath)
-        
-        if let decks = self.decks
+
+        if let decks = DeckController.sharedController.fetchAllDecksInContext(Stack.sharedStack.managedObjectContext)
         {
             let deck = decks[indexPath.row]
             cell.textLabel?.text = deck.name
