@@ -233,8 +233,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-UA-2NY" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="326" width="343" height="203"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-UA-2NY" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="327" width="343" height="203"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uNz-n4-bWD" customClass="MaterialTextView" customModule="FlashStudy" customModuleProvider="target">
                                         <rect key="frame" x="14" y="54" width="315" height="129"/>
@@ -263,37 +263,6 @@
                                     <constraint firstItem="uNz-n4-bWD" firstAttribute="top" secondItem="NL7-4v-acg" secondAttribute="bottom" constant="8" id="fU9-EG-2YR"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR0-iR-QKZ" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
-                                <rect key="frame" x="16" y="72" width="343" height="207"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-wC-QUv" customClass="MaterialTextView" customModule="FlashStudy" customModuleProvider="target">
-                                        <rect key="frame" x="14" y="54" width="316" height="129"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pose Question..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-O7-kqO">
-                                        <rect key="frame" x="99" y="8" width="146" height="38"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="146" id="2nw-Se-iXq"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="huE-Kz-AQN"/>
-                                            <constraint firstAttribute="height" constant="38" id="sh7-Fy-kOF"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.92648237180000004" green="0.92648237180000004" blue="0.92648237180000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Bic-wC-QUv" firstAttribute="top" secondItem="qR7-O7-kqO" secondAttribute="bottom" constant="8" id="0Fe-y2-ek0"/>
-                                    <constraint firstItem="qR7-O7-kqO" firstAttribute="top" secondItem="oR0-iR-QKZ" secondAttribute="top" constant="8" id="7Vg-sa-eCN"/>
-                                    <constraint firstAttribute="bottom" secondItem="Bic-wC-QUv" secondAttribute="bottom" constant="24" id="AGR-fo-DnK"/>
-                                    <constraint firstItem="qR7-O7-kqO" firstAttribute="centerX" secondItem="oR0-iR-QKZ" secondAttribute="centerX" id="Ar6-ie-BPU"/>
-                                    <constraint firstItem="Bic-wC-QUv" firstAttribute="leading" secondItem="oR0-iR-QKZ" secondAttribute="leading" constant="14" id="J5X-ml-UdV"/>
-                                    <constraint firstItem="qR7-O7-kqO" firstAttribute="centerX" secondItem="Bic-wC-QUv" secondAttribute="centerX" id="p0J-x5-8is"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRz-Nh-jAl" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
                                 <rect key="frame" x="16" y="583" width="343" height="64"/>
                                 <subviews>
@@ -319,6 +288,37 @@
                                     <constraint firstAttribute="bottom" secondItem="Yfo-By-it0" secondAttribute="bottom" constant="17" id="TDq-9U-bKu"/>
                                     <constraint firstItem="Yfo-By-it0" firstAttribute="leading" secondItem="MRz-Nh-jAl" secondAttribute="leading" constant="107" id="fkk-0Y-8My"/>
                                     <constraint firstAttribute="trailing" secondItem="Yfo-By-it0" secondAttribute="trailing" constant="107" id="jXM-u0-3qc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oR0-iR-QKZ" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="87" width="343" height="207"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bic-wC-QUv" customClass="MaterialTextView" customModule="FlashStudy" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="54" width="316" height="129"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pose Question..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-O7-kqO">
+                                        <rect key="frame" x="99" y="8" width="146" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="2nw-Se-iXq"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="huE-Kz-AQN"/>
+                                            <constraint firstAttribute="height" constant="38" id="sh7-Fy-kOF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92648237180000004" green="0.92648237180000004" blue="0.92648237180000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Bic-wC-QUv" firstAttribute="top" secondItem="qR7-O7-kqO" secondAttribute="bottom" constant="8" id="0Fe-y2-ek0"/>
+                                    <constraint firstItem="qR7-O7-kqO" firstAttribute="top" secondItem="oR0-iR-QKZ" secondAttribute="top" constant="8" id="7Vg-sa-eCN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bic-wC-QUv" secondAttribute="bottom" constant="24" id="AGR-fo-DnK"/>
+                                    <constraint firstItem="qR7-O7-kqO" firstAttribute="centerX" secondItem="oR0-iR-QKZ" secondAttribute="centerX" id="Ar6-ie-BPU"/>
+                                    <constraint firstItem="Bic-wC-QUv" firstAttribute="leading" secondItem="oR0-iR-QKZ" secondAttribute="leading" constant="14" id="J5X-ml-UdV"/>
+                                    <constraint firstItem="qR7-O7-kqO" firstAttribute="centerX" secondItem="Bic-wC-QUv" secondAttribute="centerX" id="p0J-x5-8is"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -349,8 +349,14 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="STi-hw-wOy"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationItem key="navigationItem" id="STi-hw-wOy">
+                        <barButtonItem key="rightBarButtonItem" title="+ Card To Deck" id="6xy-cT-IGM">
+                            <connections>
+                                <action selector="addCardButtonTapped:" destination="qMg-hA-Jym" id="bWs-9I-fzt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
