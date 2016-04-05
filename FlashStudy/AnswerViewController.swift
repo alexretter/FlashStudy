@@ -11,59 +11,104 @@ import UIKit
 class AnswerViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
-
+    
     @IBOutlet weak var answerLabel: UILabel!
+    
+    var knownCards: [Flashcard] = []
+    var unknownCards: [Flashcard] = []
+    var tempFlashcardsArray: [Flashcard] = []
     
     var randomIndex = 0
     
     var deck: Deck!
+    
+    var card: Flashcard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = false
         
-        randomIndex = Int(arc4random_uniform(UInt32(deck.flashcards.count)))
+        self.tempFlashcardsArray = deck.flashcards
+        randomIndex = Int(arc4random_uniform(UInt32(tempFlashcardsArray.count)))
+        card = tempFlashcardsArray[randomIndex]
         
-        let card = deck.flashcards[randomIndex]
-        
-        questionLabel.text = card.question
-        answerLabel.text = card.answer
+        if let card = card {
+            
+            questionLabel.text = card.question
+            answerLabel.text = card.answer
+        }
         
         self.answerLabel.hidden = true
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-    /*@IBAction func repeatCardButtonTapped(sender: AnyObject) {
-        deck.unknownCards.append(deck.deckOfFlashcards[randomIndex])
-        goToNextCard()
-    }*/
-
-    @IBAction func revealAnswerButtonTapped(sender: AnyObject) {
+    @IBAction func repeatCardButtonTapped(sender: AnyObject) {
+        if let card = self.card
+        {
+            tempFlashcardsArray.removeAtIndex(randomIndex)
+            unknownCards.append(card)
+            if tempFlashcardsArray.count == 0 {
+                let alertController = UIAlertController(title: "You have completed your deck!", message: "Click Below for Score! 👏🏻", preferredStyle: .Alert)
+                let getScoreButton = UIAlertAction(title: "Get Score!", style: .Default, handler: { (_) -> Void in
+                    self.performSegueWithIdentifier("toScoreCard", sender: nil)
+                })
+                alertController.addAction(getScoreButton)
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+            } else {
+                goToNextCard()
+            }
+        }
+    }
     
+    @IBAction func revealAnswerButtonTapped(sender: AnyObject) {
+        
         self.answerLabel.hidden = false
         
-        answerLabel.text = deck.flashcards[randomIndex].answer
+        answerLabel.text = tempFlashcardsArray[randomIndex].answer
         
     }
     @IBAction func nextQuestionButtonTapped(sender: AnyObject) {
-    
-        goToNextCard()
+        if let card = self.card
+        {
+            tempFlashcardsArray.removeAtIndex(randomIndex)
+            knownCards.append(card)
+            if tempFlashcardsArray.count == 0 {
+                let alertController = UIAlertController(title: "You have completed your deck!", message: "Click Below for Score! 👏🏻", preferredStyle: .Alert)
+                let getScoreButton = UIAlertAction(title: "Get Score", style: .Default, handler: { (_) -> Void in
+                    self.performSegueWithIdentifier("toScoreCard", sender: nil)
+                })
+                alertController.addAction(getScoreButton)
+                self.presentViewController(alertController, animated: true, completion: nil)
+                
+            } else {
+                goToNextCard()
+            }
+        }
     }
     
-    func goToNextCard() {
-        randomIndex = Int(arc4random_uniform(UInt32(deck.flashcards.count)))
-        let card = deck.flashcards[randomIndex]
+    func goToNextCard()
+    {
+        randomIndex = Int(arc4random_uniform(UInt32(tempFlashcardsArray.count)))
+        let card = tempFlashcardsArray[randomIndex]
         questionLabel.text = card.question
         answerLabel.text = card.answer
         answerLabel.hidden = true
     }
     
+    func deckComplete() {
+        
+        
+    }
+    
 }
+
+

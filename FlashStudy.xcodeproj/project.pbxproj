@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9912C1D21CB418AA00A8FD45 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912C1D11CB418AA00A8FD45 /* QuizController.swift */; };
+		9912C1D41CB41FB600A8FD45 /* ScoreCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912C1D31CB41FB600A8FD45 /* ScoreCardViewController.swift */; };
 		992CACD21CAB1ACA00237482 /* MOC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 992CACD01CAB1ACA00237482 /* MOC.xcdatamodeld */; };
 		992CACD41CAB1DE100237482 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992CACD31CAB1DE100237482 /* Stack.swift */; };
 		992CACE51CAB2A0C00237482 /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992CACE11CAB2A0C00237482 /* Deck+CoreDataProperties.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9912C1D11CB418AA00A8FD45 /* QuizController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
+		9912C1D31CB41FB600A8FD45 /* ScoreCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardViewController.swift; sourceTree = "<group>"; };
 		992CACD11CAB1ACA00237482 /* MOC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MOC.xcdatamodel; sourceTree = "<group>"; };
 		992CACD31CAB1DE100237482 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		992CACE11CAB2A0C00237482 /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			children = (
 				996A5A7B1CA5B97600972629 /* FlashcardController.swift */,
 				996A5A7D1CA5CF8300972629 /* DeckController.swift */,
+				9912C1D11CB418AA00A8FD45 /* QuizController.swift */,
 				995FE0841CA8DBEB000B38C9 /* Custom View */,
 			);
 			name = Controller;
@@ -203,6 +208,7 @@
 				996AD9211CA59FC000D300C8 /* AddCardViewController.swift */,
 				996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */,
 				996AD92D1CA5A3F700D300C8 /* AnswerViewController.swift */,
+				9912C1D31CB41FB600A8FD45 /* ScoreCardViewController.swift */,
 				996A5A7A1CA5B96300972629 /* Controller */,
 			);
 			name = View;
@@ -340,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				992CACE61CAB2A0C00237482 /* Deck.swift in Sources */,
+				9912C1D41CB41FB600A8FD45 /* ScoreCardViewController.swift in Sources */,
 				992CACD21CAB1ACA00237482 /* MOC.xcdatamodeld in Sources */,
 				992CACE81CAB2A0C00237482 /* Flashcard.swift in Sources */,
 				996A5A7E1CA5CF8300972629 /* DeckController.swift in Sources */,
@@ -352,6 +359,7 @@
 				992CACE71CAB2A0C00237482 /* Flashcard+CoreDataProperties.swift in Sources */,
 				995FE0851CA8DBEB000B38C9 /* MaterialButton.swift in Sources */,
 				995FE0871CA8DBEB000B38C9 /* MaterialTextView.swift in Sources */,
+				9912C1D21CB418AA00A8FD45 /* QuizController.swift in Sources */,
 				996AD9221CA59FC000D300C8 /* AddCardViewController.swift in Sources */,
 				996AD9241CA59FE000D300C8 /* HomeViewController.swift in Sources */,
 				996AD92E1CA5A3F700D300C8 /* AnswerViewController.swift in Sources */,
