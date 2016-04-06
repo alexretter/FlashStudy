@@ -15,12 +15,19 @@ class QuizController
         let knownCardsCount = knownCards.count
         let unknownCardsCount = unknownCards.count
         
-        return knownCardsCount - unknownCardsCount
-        
-    }
-    
-    static func getPercentageKnown(scoreCount: Int, flashcards: [Flashcard]) -> Double
-    {
-        return Double(scoreCount / flashcards.count)
+        if knownCardsCount < unknownCardsCount
+        {
+            let doubleScore = Double(knownCardsCount) / Double(unknownCardsCount)
+            let intScore = Int(doubleScore * 100)
+            print(intScore)
+            return intScore
+        }
+        else
+        {
+            let doubleScore = Double(unknownCardsCount) / Double(knownCardsCount)
+            let intScore = Int(doubleScore * 100)
+            print(intScore)
+            return intScore
+        }
     }
 }

@@ -11,21 +11,24 @@ import UIKit
 class ScoreCardViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
 
+    var unknownCards: [Flashcard]?
+    var knownCards: [Flashcard]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let known = self.knownCards, let unknown = self.unknownCards
+        {
+            let score = QuizController.scoreCardsKnown(known, unknownCards: unknown)
+            scoreLabel.text = "\(score)%"
+        }
 
         // Do any additional setup after loading the view.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toQuestionList" {
-            
-        let destinationViewController = segue.destinationViewController as? HomeViewController
-    }
-}
     @IBAction func backToHomeButtonTapped(sender: AnyObject) {
         
-        performSegueWithIdentifier("backToHome", sender: nil)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
 }

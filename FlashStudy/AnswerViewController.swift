@@ -109,6 +109,15 @@ class AnswerViewController: UIViewController {
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toScoreCard"
+        {
+            let scoreCardVC = segue.destinationViewController as! ScoreCardViewController
+            scoreCardVC.knownCards = self.knownCards
+            scoreCardVC.unknownCards = self.unknownCards
+        }
+    }
+    
 }
 
 
