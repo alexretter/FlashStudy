@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddCardViewController: UIViewController {
+class AddCardViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var questionTextView: UITextView!
     
@@ -49,6 +49,10 @@ class AddCardViewController: UIViewController {
             questionTextView.becomeFirstResponder()
             FlashcardController.saveToPersistentStore()
         }
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        textView.selectedRange = NSMakeRange(0, 0)
     }
 
 }

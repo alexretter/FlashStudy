@@ -20,20 +20,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="89510111027717.560f00c6e6b86" translatesAutoresizingMaskIntoConstraints="NO" id="6U3-ak-Pg7">
                                 <rect key="frame" x="106" y="74" width="162" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="162" id="8DR-6f-MCb"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="195" id="E3x-cv-wR0"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="meA-Iq-5yx"/>
-                                    <constraint firstAttribute="height" constant="195" id="rsI-3A-FVa"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="26e-9U-5Bn"/>
+                                    <constraint firstAttribute="width" constant="162" id="RgW-Zf-DH9"/>
+                                    <constraint firstAttribute="height" constant="195" id="U1f-x9-afX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99215686270000003" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="106" id="5Ec-27-V9g"/>
-                            <constraint firstAttribute="trailing" secondItem="6U3-ak-Pg7" secondAttribute="trailing" constant="107" id="7XH-O4-3CT"/>
-                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="54" id="CYm-S9-Xls"/>
-                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zuK-tY-vdM"/>
+                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="54" id="1e9-MG-4Vr"/>
+                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="FiV-lb-Uw8"/>
+                            <constraint firstItem="6U3-ak-Pg7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="106" id="HET-bY-eLc"/>
+                            <constraint firstAttribute="trailing" secondItem="6U3-ak-Pg7" secondAttribute="trailing" constant="107" id="a87-xH-ykP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HET-bY-eLc"/>
+                                <exclude reference="a87-xH-ykP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>

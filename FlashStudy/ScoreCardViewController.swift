@@ -17,13 +17,14 @@ class ScoreCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBarHidden = true
+        
         if let known = self.knownCards, let unknown = self.unknownCards
         {
             let score = QuizController.scoreCardsKnown(known, unknownCards: unknown)
             scoreLabel.text = "\(score)%"
         }
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func backToHomeButtonTapped(sender: AnyObject) {
