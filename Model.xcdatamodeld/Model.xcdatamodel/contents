@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
-    <elements/>
+    <entity name="Deck" representedClassName=".Deck" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="flashcards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Flashcard" inverseName="deck" inverseEntity="Flashcard" syncable="YES"/>
+    </entity>
+    <entity name="Flashcard" representedClassName=".Flashcard" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="question" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="deck" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Deck" inverseName="flashcards" inverseEntity="Deck" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Flashcard" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Deck" positionX="124" positionY="-27" width="128" height="73"/>
+    </elements>
 </model>

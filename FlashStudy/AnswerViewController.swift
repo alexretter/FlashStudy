@@ -29,7 +29,7 @@ class AnswerViewController: UIViewController {
         
         self.navigationController?.navigationBarHidden = false
         
-        self.tempFlashcardsArray = deck.flashcards
+        //self.tempFlashcardsArray = deck.flashcards
         randomIndex = Int(arc4random_uniform(UInt32(tempFlashcardsArray.count)))
         card = tempFlashcardsArray[randomIndex]
         

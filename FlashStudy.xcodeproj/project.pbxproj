@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990E20C71CC57B4A008B7C85 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 990E20C51CC57B4A008B7C85 /* Model.xcdatamodeld */; };
+		990E20CC1CC57D3C008B7C85 /* Deck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E20C81CC57D3C008B7C85 /* Deck+CoreDataProperties.swift */; };
+		990E20CD1CC57D3C008B7C85 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E20C91CC57D3C008B7C85 /* Deck.swift */; };
+		990E20CE1CC57D3C008B7C85 /* Flashcard+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E20CA1CC57D3C008B7C85 /* Flashcard+CoreDataProperties.swift */; };
+		990E20CF1CC57D3C008B7C85 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990E20CB1CC57D3C008B7C85 /* Flashcard.swift */; };
 		9912C1D21CB418AA00A8FD45 /* QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912C1D11CB418AA00A8FD45 /* QuizController.swift */; };
 		9912C1D41CB41FB600A8FD45 /* ScoreCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9912C1D31CB41FB600A8FD45 /* ScoreCardViewController.swift */; };
-		99461DC81CC572E300744EEE /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99461DC71CC572E300744EEE /* Model.xcdatamodeld */; };
 		996A5A801CA5EE0600972629 /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */; };
 		996AD8E91CA5975300D300C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996AD8E81CA5975300D300C8 /* AppDelegate.swift */; };
 		996AD8EE1CA5975300D300C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996AD8EC1CA5975300D300C8 /* Main.storyboard */; };
@@ -21,8 +25,6 @@
 		996AD92E1CA5A3F700D300C8 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996AD92D1CA5A3F700D300C8 /* AnswerViewController.swift */; };
 		99C8BF9C1CC1D97D004F1EB1 /* FlashcardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8BF9B1CC1D97D004F1EB1 /* FlashcardController.swift */; };
 		99C8BFA01CC1D9FE004F1EB1 /* DeckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8BF9F1CC1D9FE004F1EB1 /* DeckController.swift */; };
-		99C8BFA41CC1DA35004F1EB1 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8BFA31CC1DA35004F1EB1 /* Flashcard.swift */; };
-		99C8BFAA1CC2CEB7004F1EB1 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8BFA91CC2CEB7004F1EB1 /* Deck.swift */; };
 		99C8BFAE1CC2D0F5004F1EB1 /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8BFAD1CC2D0F5004F1EB1 /* AddCardViewController.swift */; };
 		99C8C0421CC57225004F1EB1 /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8C03B1CC57225004F1EB1 /* MaterialButton.swift */; };
 		99C8C0431CC57225004F1EB1 /* MaterialTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C8C03C1CC57225004F1EB1 /* MaterialTextView.swift */; };
@@ -48,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		990E20C61CC57B4A008B7C85 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		990E20C81CC57D3C008B7C85 /* Deck+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Deck+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		990E20C91CC57D3C008B7C85 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = SOURCE_ROOT; };
+		990E20CA1CC57D3C008B7C85 /* Flashcard+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Flashcard+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		990E20CB1CC57D3C008B7C85 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = SOURCE_ROOT; };
 		9912C1D11CB418AA00A8FD45 /* QuizController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizController.swift; sourceTree = "<group>"; };
 		9912C1D31CB41FB600A8FD45 /* ScoreCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCardViewController.swift; sourceTree = "<group>"; };
 		996A5A7F1CA5EE0600972629 /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
@@ -67,8 +74,6 @@
 		996AD92D1CA5A3F700D300C8 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		99C8BF9B1CC1D97D004F1EB1 /* FlashcardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashcardController.swift; sourceTree = "<group>"; };
 		99C8BF9F1CC1D9FE004F1EB1 /* DeckController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckController.swift; sourceTree = "<group>"; };
-		99C8BFA31CC1DA35004F1EB1 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
-		99C8BFA91CC2CEB7004F1EB1 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		99C8BFAD1CC2D0F5004F1EB1 /* AddCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		99C8C03B1CC57225004F1EB1 /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialButton.swift; path = FlashStudy/MaterialButton.swift; sourceTree = SOURCE_ROOT; };
 		99C8C03C1CC57225004F1EB1 /* MaterialTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaterialTextView.swift; path = FlashStudy/MaterialTextView.swift; sourceTree = SOURCE_ROOT; };
@@ -104,10 +109,14 @@
 		992CACCF1CAB1A8A00237482 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				99461DC71CC572E300744EEE /* Model.xcdatamodeld */,
+				990E20C81CC57D3C008B7C85 /* Deck+CoreDataProperties.swift */,
+				990E20C91CC57D3C008B7C85 /* Deck.swift */,
+				990E20CA1CC57D3C008B7C85 /* Flashcard+CoreDataProperties.swift */,
+				990E20CB1CC57D3C008B7C85 /* Flashcard.swift */,
 				99C8C03F1CC57225004F1EB1 /* Stack.swift */,
 			);
 			name = "Core Data";
+			path = ../../LocalBulb/LocalBulb;
 			sourceTree = "<group>";
 		};
 		995FE0841CA8DBEB000B38C9 /* Custom View */ = {
@@ -116,7 +125,6 @@
 				99C8C03B1CC57225004F1EB1 /* MaterialButton.swift */,
 				99C8C03C1CC57225004F1EB1 /* MaterialTextView.swift */,
 				99C8C03D1CC57225004F1EB1 /* MaterialView.swift */,
-				992CACCF1CAB1A8A00237482 /* Core Data */,
 			);
 			name = "Custom View";
 			path = ../../LocalBulb/LocalBulb;
@@ -136,6 +144,7 @@
 		996AD8DC1CA5975300D300C8 = {
 			isa = PBXGroup;
 			children = (
+				990E20C51CC57B4A008B7C85 /* Model.xcdatamodeld */,
 				996AD8E71CA5975300D300C8 /* FlashStudy */,
 				996AD8FC1CA5975300D300C8 /* FlashStudyTests */,
 				996AD9071CA5975400D300C8 /* FlashStudyUITests */,
@@ -159,6 +168,7 @@
 				996AD8E81CA5975300D300C8 /* AppDelegate.swift */,
 				996AD8EC1CA5975300D300C8 /* Main.storyboard */,
 				996AD91F1CA59EE200D300C8 /* Model */,
+				992CACCF1CAB1A8A00237482 /* Core Data */,
 				996AD9201CA59EE700D300C8 /* View */,
 				996AD8EF1CA5975300D300C8 /* Assets.xcassets */,
 				996AD8F11CA5975300D300C8 /* LaunchScreen.storyboard */,
@@ -188,8 +198,6 @@
 		996AD91F1CA59EE200D300C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				99C8BFA31CC1DA35004F1EB1 /* Flashcard.swift */,
-				99C8BFA91CC2CEB7004F1EB1 /* Deck.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -338,19 +346,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990E20CD1CC57D3C008B7C85 /* Deck.swift in Sources */,
 				99C8C0431CC57225004F1EB1 /* MaterialTextView.swift in Sources */,
 				99C8BF9C1CC1D97D004F1EB1 /* FlashcardController.swift in Sources */,
 				9912C1D41CB41FB600A8FD45 /* ScoreCardViewController.swift in Sources */,
-				99C8BFA41CC1DA35004F1EB1 /* Flashcard.swift in Sources */,
 				996A5A801CA5EE0600972629 /* QuestionsTableViewController.swift in Sources */,
+				990E20CF1CC57D3C008B7C85 /* Flashcard.swift in Sources */,
 				996AD8E91CA5975300D300C8 /* AppDelegate.swift in Sources */,
 				99C8C0441CC57225004F1EB1 /* MaterialView.swift in Sources */,
 				99C8BFAE1CC2D0F5004F1EB1 /* AddCardViewController.swift in Sources */,
+				990E20C71CC57B4A008B7C85 /* Model.xcdatamodeld in Sources */,
 				99C8C0461CC57225004F1EB1 /* Stack.swift in Sources */,
-				99C8BFAA1CC2CEB7004F1EB1 /* Deck.swift in Sources */,
+				990E20CC1CC57D3C008B7C85 /* Deck+CoreDataProperties.swift in Sources */,
 				99C8C0421CC57225004F1EB1 /* MaterialButton.swift in Sources */,
-				99461DC81CC572E300744EEE /* Model.xcdatamodeld in Sources */,
 				99C8BFA01CC1D9FE004F1EB1 /* DeckController.swift in Sources */,
+				990E20CE1CC57D3C008B7C85 /* Flashcard+CoreDataProperties.swift in Sources */,
 				9912C1D21CB418AA00A8FD45 /* QuizController.swift in Sources */,
 				996AD9241CA59FE000D300C8 /* HomeViewController.swift in Sources */,
 				996AD92E1CA5A3F700D300C8 /* AnswerViewController.swift in Sources */,
@@ -605,12 +615,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		99461DC71CC572E300744EEE /* Model.xcdatamodeld */ = {
+		990E20C51CC57B4A008B7C85 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				990E20C61CC57B4A008B7C85 /* Model.xcdatamodel */,
 			);
-			name = Model.xcdatamodeld;
-			path = ../../FlashStudy/Model.xcdatamodeld;
+			currentVersion = 990E20C61CC57B4A008B7C85 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
