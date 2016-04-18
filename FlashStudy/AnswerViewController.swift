@@ -50,7 +50,7 @@ class AnswerViewController: UIViewController {
     }
     
     
-    @IBAction func repeatCardButtonTapped(sender: AnyObject) {
+  /*  @IBAction func repeatCardButtonTapped(sender: AnyObject) {
         if let card = self.card
         {
             tempFlashcardsArray.removeAtIndex(randomIndex)
@@ -67,7 +67,7 @@ class AnswerViewController: UIViewController {
                 goToNextCard()
             }
         }
-    }
+    } */
     
     @IBAction func revealAnswerButtonTapped(sender: AnyObject) {
         
@@ -82,11 +82,11 @@ class AnswerViewController: UIViewController {
             tempFlashcardsArray.removeAtIndex(randomIndex)
             knownCards.append(card)
             if tempFlashcardsArray.count == 0 {
-                let alertController = UIAlertController(title: "You have completed your deck!", message: "Click Below for Score! 👏🏻", preferredStyle: .Alert)
-                let getScoreButton = UIAlertAction(title: "Get Score", style: .Default, handler: { (_) -> Void in
-                    self.performSegueWithIdentifier("toScoreCard", sender: nil)
+                let alertController = UIAlertController(title: "You have completed your deck!", message: "Click below to view your decks!", preferredStyle: .Alert)
+                let ViewDecks = UIAlertAction(title: "Good Job!", style: .Default, handler: { (_) -> Void in
+                    self.performSegueWithIdentifier("toHome", sender: nil)
                 })
-                alertController.addAction(getScoreButton)
+                //alertController.addAction(getScoreButton)
                 self.presentViewController(alertController, animated: true, completion: nil)
                 
             } else {
@@ -109,12 +109,21 @@ class AnswerViewController: UIViewController {
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toScoreCard"
         {
             let scoreCardVC = segue.destinationViewController as! ScoreCardViewController
             scoreCardVC.knownCards = self.knownCards
             scoreCardVC.unknownCards = self.unknownCards
+        }
+    } */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toHome" {
+            
+            let homeVC = segue.destinationViewController as! HomeViewController
+            
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
     

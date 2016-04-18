@@ -341,12 +341,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-93-d2b">
-                                <rect key="frame" x="67" y="64" width="240" height="124"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qp-fN-6vt">
                                 <rect key="frame" x="67" y="226" width="240" height="124"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
@@ -368,20 +362,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-J4-0pe" customClass="MaterialButton" customModule="FlashStudy" customModuleProvider="target">
-                                                <rect key="frame" x="129" y="26" width="103" height="66"/>
+                                                <rect key="frame" x="69" y="31" width="103" height="66"/>
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Show Answer"/>
                                                 <connections>
                                                     <action selector="revealAnswerButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="AGv-Y6-bOm"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeL-qw-Lu3" customClass="MaterialButton" customModule="FlashStudy" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="26" width="103" height="66"/>
-                                                <color key="backgroundColor" red="0.99215686270000003" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" title="Not Sure"/>
-                                                <connections>
-                                                    <action selector="repeatCardButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="WUE-li-PYq"/>
-                                                    <action selector="revealAnswerButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="ZHL-U6-lvG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -389,6 +374,12 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4q-93-d2b">
+                                <rect key="frame" x="67" y="72" width="240" height="124"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.75294117650000003" green="0.81960784310000001" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

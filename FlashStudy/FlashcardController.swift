@@ -2,7 +2,7 @@
 //  FlashcardController.swift
 //  FlashStudy
 //
-//  Created by Alex Retter on 3/25/16.
+//  Created by Alex Retter on 4/15/16.
 //  Copyright © 2016 ReGroup. All rights reserved.
 //
 
@@ -48,7 +48,7 @@ class FlashcardController {
     
     static func insertFlashcardIntoContext(context: NSManagedObjectContext) -> Flashcard {
         
-       return NSEntityDescription.insertNewObjectForEntityForName("Flashcard", inManagedObjectContext: context) as! Flashcard
+        return NSEntityDescription.insertNewObjectForEntityForName("Flashcard", inManagedObjectContext: context) as! Flashcard
     }
     
     func removeFlashcardFromContext() {

@@ -9,11 +9,11 @@
 import UIKit
 
 class AddCardViewController: UIViewController, UITextViewDelegate {
-
+    
     @IBOutlet weak var questionTextView: UITextView!
     
     @IBOutlet weak var answerTextView: UITextView!
-   
+    
     var deck: Deck?
     
     override func viewDidLoad() {
@@ -21,10 +21,10 @@ class AddCardViewController: UIViewController, UITextViewDelegate {
         self.navigationController?.navigationBarHidden = false
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,9 +33,9 @@ class AddCardViewController: UIViewController, UITextViewDelegate {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
     @IBAction func addCardButtonTapped(sender: AnyObject) {
-       
+        
         if let deck = self.deck
         {
             let card = FlashcardController.insertFlashcardIntoContext(deck.managedObjectContext!)
@@ -54,5 +54,5 @@ class AddCardViewController: UIViewController, UITextViewDelegate {
     func textViewDidBeginEditing(textView: UITextView) {
         textView.selectedRange = NSMakeRange(0, 0)
     }
-
+    
 }
