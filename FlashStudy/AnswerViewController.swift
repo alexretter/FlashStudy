@@ -14,9 +14,10 @@ class AnswerViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
     
+    var flashcards: [Flashcard] = []
     var knownCards: [Flashcard] = []
     var unknownCards: [Flashcard] = []
-    var tempFlashcardsArray: [Flashcard] = []
+   // var tempFlashcardsArray: [Flashcard] = []
     
     var randomIndex = 0
     
@@ -30,8 +31,8 @@ class AnswerViewController: UIViewController {
         self.navigationController?.navigationBarHidden = false
         
         //self.tempFlashcardsArray = deck.flashcards
-        randomIndex = Int(arc4random_uniform(UInt32(tempFlashcardsArray.count)))
-        card = tempFlashcardsArray[randomIndex]
+        randomIndex = Int(arc4random_uniform(UInt32(flashcards.count)))
+        //card = tempFlashcardsArray[randomIndex]
         
         if let card = card {
             
@@ -73,15 +74,15 @@ class AnswerViewController: UIViewController {
         
         self.answerLabel.hidden = false
         
-        answerLabel.text = tempFlashcardsArray[randomIndex].answer
+        answerLabel.text = flashcards[randomIndex].answer
         
     }
     @IBAction func nextQuestionButtonTapped(sender: AnyObject) {
         if let card = self.card
         {
-            tempFlashcardsArray.removeAtIndex(randomIndex)
+            flashcards.removeAtIndex(randomIndex)
             knownCards.append(card)
-            if tempFlashcardsArray.count == 0 {
+            if flashcards.count == 0 {
                 let alertController = UIAlertController(title: "You have completed your deck!", message: "Click below to view your decks!", preferredStyle: .Alert)
                 let ViewDecks = UIAlertAction(title: "Good Job!", style: .Default, handler: { (_) -> Void in
                     self.performSegueWithIdentifier("toHome", sender: nil)
@@ -97,8 +98,8 @@ class AnswerViewController: UIViewController {
     
     func goToNextCard()
     {
-        randomIndex = Int(arc4random_uniform(UInt32(tempFlashcardsArray.count)))
-        let card = tempFlashcardsArray[randomIndex]
+        randomIndex = Int(arc4random_uniform(UInt32(flashcards.count)))
+        let card = flashcards[randomIndex]
         questionLabel.text = card.question
         answerLabel.text = card.answer
         answerLabel.hidden = true

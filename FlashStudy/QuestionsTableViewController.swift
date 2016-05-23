@@ -66,9 +66,10 @@ class QuestionsTableViewController: UITableViewController {
         // Configure the cell...
         
         let flashcards = deck?.flashcards?.count
-        let flashcard = deck?.flashcards[indexPath.row]
+        let flashcard = deck?.flashcards?.allObjects[indexPath.row] as? Flashcard
+        if let flashcard = flashcard {
         cell.textLabel?.text = flashcard.question
-        
+        }
         return cell
     }
     

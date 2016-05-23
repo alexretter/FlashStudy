@@ -353,20 +353,20 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6rF-bw-xtg" customClass="MaterialView" customModule="FlashStudy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="168"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-nj-Bi6">
-                                                <rect key="frame" x="42" y="122" width="157" height="38"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Next Question "/>
-                                                <connections>
-                                                    <action selector="nextQuestionButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="9pt-Gx-iDG"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-J4-0pe" customClass="MaterialButton" customModule="FlashStudy" customModuleProvider="target">
                                                 <rect key="frame" x="69" y="31" width="103" height="66"/>
                                                 <color key="backgroundColor" red="0.99215686270000003" green="0.74509803919999995" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" title="Show Answer"/>
                                                 <connections>
                                                     <action selector="revealAnswerButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="AGv-Y6-bOm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qu-nj-Bi6">
+                                                <rect key="frame" x="42" y="122" width="157" height="38"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Next Question "/>
+                                                <connections>
+                                                    <action selector="nextQuestionButtonTapped:" destination="pw0-FP-Zko" eventType="touchUpInside" id="3lK-3r-N9t"/>
                                                 </connections>
                                             </button>
                                         </subviews>
